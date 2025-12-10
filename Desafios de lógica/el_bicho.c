@@ -8,10 +8,12 @@ int verificador(int n){
     int min_gp = (max_gp-4) + 1;
 
     if ( dezena>=min_gp && dezena<=max_gp){
-     return printf(" Válido!\n"); 
+     printf(" Válido!\n"); 
     }else{
-     return printf(" Inválido!\n");   
+     printf(" Inválido!\n");   
     }
+    
+  return 0;
 }
 
 int main(){
