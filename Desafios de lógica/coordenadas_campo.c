@@ -1,22 +1,43 @@
 #include <stdio.h>
-int main()
-{
-  int k; //Tamanho da área do campo
+#define tam 8
+
+void info(void){
+  printf("\n\n #=== Limites ===#\n\n");
+  printf(" Coordenada X entre -8 e 8 \n");
+  printf(" Coordenada Y entre 1 e 8\n\n");
+}
+
+int var (float x, float y){
+
+  printf(" \n Status da bola: ");
+
+  if (x < -tam || x > tam || y<=0 || y>tam){
+    printf("Fora de campo!\n\n");
+  }else{
+    printf("Dentro de campo.\n\n");
+  }
+  return 0;
+}
+
+struct coordenada{
+  float X;
+  float Y;
+};
+
+typedef struct coordenada coordenada;
+
+int main(){
+  coordenada p1;
   
-  printf(" Informe o tamanho da área da quadra: ");
-  scanf("%d",&k);
-  
-  int x,y;
-  printf(" Informe as coordenadas x e y: ");
-  scanf("%d %d",&x,&y);
-  
-   printf(" \n Situação: ");
-  
-   if (y<=0 || y>k || x>k || x<-k){
-     printf("Fora de campo!\n");
-   }else{
-     printf("Dentro de campo.\n");  
-   }
+  info();
+
+  printf(" Informe a coordenada de X: ");
+  scanf("%f",&p1.X);
+
+  printf(" Informe a coordenada de Y: ");
+  scanf("%f",&p1.Y);
+
+  var(p1.X,p1.Y);
   
   return 0;
 }
