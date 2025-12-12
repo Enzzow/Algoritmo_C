@@ -7,6 +7,6 @@ int main(){
     printf("\n Antes: %d\n",*modf);
 
     *modf = 100;
-    printf(" Depois: %d\n",*modf);
+    printf(" Depois: %d\n",*modf); //Teste
     
 }
