@@ -11,11 +11,12 @@ int main (){
         printf(" Informe quantos números deseja armazenar: ");
         scanf("%d",&n);
 
-        if (n<=0)
-          printf(" \n Inválido! \n");
-        else
-          printf(" \n Tamanho válido! \n");
+        if (n<=0){
+          printf("\n Tamanho inválido! \n");
+        }else{
+          printf("\n Tamanho aceito! \n");
           permitido = true;
+        }
     }
 
     int *vetor = (int*) malloc(n* sizeof(int)); //Reservando memória
