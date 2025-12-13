@@ -19,6 +19,11 @@ int main (){
     }
 
     int *vetor = (int*) malloc(n* sizeof(int)); //Reservando memória
+    if (vetor==NULL){
+        printf("\n Erro na alocação de memória!\n");
+        return 1;
+    }
+      
 
     for (int i=0; i<n ;++i){
         *(vetor+i) = i*3;
@@ -33,6 +38,7 @@ int main (){
     //*(vetor+i) --> dinâmica de vetor
 
     free(vetor);
+    vetor = NULL;
 
     return 0;
 }
